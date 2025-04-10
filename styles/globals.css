@@ -1,15 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* 引入Tailwind的基础样式，包括重置样式、排版基础样式等 */
+@tailwind base; 
+/* 引入Tailwind的组件样式，如按钮、表单等组件的默认样式 */
+@tailwind components; 
+/* 引入Tailwind的工具类样式，用于设置间距、颜色等实用样式 */
+@tailwind utilities; 
 
 body {
-  @apply bg-zinc-900 h-full overflow-x-hidden;
+    /* 将Tailwind工具类应用到body元素上 */
+    @apply bg-zinc-900 h-full overflow-x-hidden; 
+    /* bg-zinc-900：设置body背景颜色为zinc色系的900号色（深色）
+       h-full：设置body高度占满父元素可用高度
+       overflow-x-hidden：隐藏body水平方向的溢出内容 */
 }
 
 #__next {
-  @apply h-full;
+    /* 将h-full工具类应用到#__next元素上，使其高度占满父元素可用高度 */
+    @apply h-full; 
 }
 
 html {
-  @apply h-full;
+    /* 将h-full工具类应用到html元素上，使其高度占满父元素可用高度 */
+    @apply h-full; 
 }
