@@ -11,6 +11,24 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// id String @id @default(auto()) @map("_id") @db.ObjectId:
+  // id: 用户的唯一标识符。
+  // String: 数据类型为字符串。
+  // @id: 指定该字段为主键。
+  // @default(auto()): 默认值自动生成。
+  // @map("_id"): 将数据库中的字段名映射为 _id。
+  // @db.ObjectId: 指定数据库中的数据类型为 ObjectId。
+  // name String: 用户的名字，数据类型为字符串。
+// image String?: 用户的头像，数据类型为可选字符串（可能为空）。
+// email String? @unique: 用户的电子邮件，数据类型为可选字符串，并且必须唯一。
+// emailVerified DateTime?: 用户的电子邮件验证时间，数据类型为可选日期时间。
+// hashedPassword String?: 用户的加密密码，数据类型为可选字符串。
+// createdAt DateTime @default(now()): 用户创建时间，数据类型为日期时间，默认值为当前时间。
+// updatedAt DateTime @updatedAt: 用户更新时间，数据类型为日期时间，每次更新时自动更新。
+// sessions Session[]: 用户的会话列表，数据类型为 Session 模型的数组。
+// accounts Account[]: 用户的账户列表，数据类型为 Account 模型的数组。
+// favoriteIds String[] @db.ObjectId: 用户收藏的 ID 列表，数据类型为字符串数组，数据库类型为 ObjectId。
+
 model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String
